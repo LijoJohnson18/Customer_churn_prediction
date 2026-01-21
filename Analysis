@@ -1,0 +1,122 @@
+Customer Churn Prediction – Project Analysis
+1. Problem Understanding
+
+Customer churn occurs when users stop using a service.
+Predicting churn helps businesses identify at-risk customers early and take preventive action such as targeted offers, improved support, or plan adjustments.
+
+This project uses Machine Learning to classify customers as:
+
+Churn = 1 → Likely to leave
+
+Churn = 0 → Likely to stay
+
+2. Dataset Overview
+
+The dataset contains customer information such as:
+
+Demographics (gender, senior citizen, etc.)
+
+Service usage (internet, phone, streaming, etc.)
+
+Contract details (monthly charges, tenure, payment method)
+
+Target variable: Churn
+
+Both numerical and categorical features are present.
+
+3. Data Preprocessing
+
+Several preprocessing steps were required:
+
+3.1 Handling Missing Values
+
+The TotalCharges column contained non-numeric values.
+These were converted to numeric and rows with missing values were removed.
+
+3.2 Encoding Categorical Variables
+
+Categorical features were converted into numeric format using One-Hot Encoding so that ML models could process them.
+
+3.3 Feature Scaling
+
+Numerical features were scaled using StandardScaler to improve model performance and training stability.
+
+3.4 Train–Test Split
+
+The data was split into:
+
+80% Training
+
+20% Testing
+
+This ensures unbiased evaluation on unseen data.
+
+4. Machine Learning Models
+
+Two main classification models were trained:
+
+4.1 Logistic Regression
+
+A simple and interpretable baseline model used for binary classification.
+
+4.2 Random Forest
+
+An ensemble model that captures non-linear relationships and feature interactions.
+
+Both models were trained on the same preprocessed data for fair comparison.
+
+5. Model Evaluation
+
+Performance was measured using:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-score
+
+Confusion Matrix
+
+These metrics help evaluate not just correctness, but how well the model identifies churners specifically (important for business impact).
+
+6. Key Observations
+
+Customers with short tenure showed higher churn rates.
+
+Month-to-month contracts had more churn compared to long-term contracts.
+
+Higher monthly charges were associated with increased churn.
+
+Service-related factors (internet type, support availability) influenced retention.
+
+These insights align with real-world customer behavior patterns.
+
+7. Optional: Neural Network (Basic DL)
+
+A simple Artificial Neural Network (ANN) was implemented using TensorFlow and Keras to explore Deep Learning for classification.
+
+Architecture:
+
+Input layer
+
+Two hidden dense layers (ReLU)
+
+Output layer (Sigmoid)
+
+The ANN achieved comparable performance to traditional ML models, showing that simpler models can often be sufficient for structured tabular data.
+
+8. Conclusion
+
+This project demonstrates an end-to-end Machine Learning workflow:
+
+Data cleaning
+
+Feature engineering
+
+Model training
+
+Performance evaluation
+
+Business interpretation
